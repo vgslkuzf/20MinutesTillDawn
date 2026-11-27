@@ -93,6 +93,14 @@ For example, `core:clean` removes `build` folder only from the `core` project.
    gradlew.bat lwjgl3:run
    ```
 
+## Browser Version
+
+The browser version is a lightweight web adaptation with mouse/keyboard and touch controls. It uses the game's pixel-art assets and is deployed to GitHub Pages when changes are pushed to `main`.
+
+- **Play:** https://vgslkuzf.github.io/20MinutesTillDawn/
+- **Desktop:** WASD or arrow keys to move, mouse to aim and click to fire, Space to auto-aim, R to reload, Esc to pause.
+- **Mobile:** Use the on-screen joystick and fire button.
+
 ## Technologies Used
 
 - [libGDX](https://libgdx.com/): A cross-platform Java game development framework

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#111321">
+    <meta name="description" content="Survive the night in this browser-playable 20 Minutes Till Dawn game.">
+    <title>20 Minutes Till Dawn</title>
+    <link rel="stylesheet" href="browser-game.css">
+  </head>
+  <body>
+    <main class="game-shell">
+      <canvas id="game" aria-label="20 Minutes Till Dawn game"></canvas>
+
+      <header class="hud" id="hud" hidden>
+        <div class="hud-top">
+          <div class="health-block">
+            <span class="hud-label">HEALTH</span>
+            <div class="health-track"><div id="healthFill"></div></div>
+          </div>
+          <div class="timer-block">
+            <span class="hud-label">TIME UNTIL DAWN</span>
+            <strong id="timer">20:00</strong>
+          </div>
+          <div class="stat-block"><span class="hud-label">LEVEL</span><strong id="level">1</strong></div>
+          <div class="stat-block"><span class="hud-label">KILLS</span><strong id="kills">0</strong></div>
+          <button class="pause-button" id="pauseButton" aria-label="Pause game">Ⅱ</button>
+        </div>
+        <div class="xp-track"><div id="xpFill"></div></div>
+      </header>
+
+      <div class="ammo" id="ammo" hidden></div>
+      <div class="mobile-controls" id="mobileControls" hidden>
+        <div class="joystick" id="joystick"><span></span></div>
+        <button id="mobileFire" aria-label="Fire weapon">FIRE</button>
+      </div>
+
+      <section class="overlay" id="overlay">
+        <div class="panel">
+          <div class="eyebrow">A PIXEL SURVIVAL GAME</div>
+          <h1 id="overlayTitle">20 MINUTES<br><span>TILL DAWN</span></h1>
+          <p id="overlayText">The night is full of monsters. Keep moving, keep shooting, and survive until sunrise.</p>
+          <div id="overlayChoices"></div>
+          <button class="primary-button" id="primaryButton">START SURVIVING</button>
+          <div class="instructions" id="instructions">
+            <span><kbd>W A S D</kbd> MOVE</span>
+            <span><kbd>MOUSE</kbd> AIM &nbsp; <kbd>CLICK</kbd> FIRE</span>
+            <span><kbd>SPACE</kbd> AUTO-AIM &nbsp; <kbd>R</kbd> RELOAD</span>
+          </div>
+          <p class="mobile-hint">On mobile: use the left stick to move and FIRE to shoot.</p>
+        </div>
+      </section>
+    </main>
+    <script src="browser-game.js"></script>
+  </body>
+</html>
