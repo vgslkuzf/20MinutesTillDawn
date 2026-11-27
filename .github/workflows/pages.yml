@@ -35,7 +35,8 @@ jobs:
         run: |
           mkdir site
           cp index.html browser-game.css browser-game.js site/
-          cp -R assets/Images site/assets
+          mkdir -p site/assets
+          cp -R assets/Images site/assets/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
